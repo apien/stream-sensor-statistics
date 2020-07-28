@@ -1,2 +1,24 @@
 *.class
 *.log
+
+
+# Specific for sbt
+.cache
+.history
+.lib/
+dist/*
+target/
+
+# Specific for Intellij IDEA
+.run
+.idea
+
+# Specific for metals
+.metals/
+metals.sbt
+
+# Specific for bloop
+.bloop/
+
+# Specific for vs code
+.vscode/
