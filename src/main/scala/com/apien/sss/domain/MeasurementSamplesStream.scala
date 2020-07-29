@@ -1,9 +1,8 @@
-package com.apien.sss
+package com.apien.sss.domain
 
 import java.nio.file.Paths
 
 import cats.effect.Blocker
-import com.apien.sss.domain.{FileResult, MeasurementSample}
 import fs2.{Stream, io, text}
 import monix.eval.Task
 

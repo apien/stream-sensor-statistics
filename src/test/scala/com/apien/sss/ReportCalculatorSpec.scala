@@ -1,11 +1,10 @@
 package com.apien.sss
 
 import cats.kernel.Monoid
-import com.apien.sss.ReportCalculator.FinalReport
-import com.apien.sss.domain.{SensorId, SensorStatistics}
-import com.apien.sss.test.{ResourceSpec, SensorSpec}
 import cats.syntax.option._
-import cats.syntax.list._
+import com.apien.sss.domain.ReportCalculator.FinalReport
+import com.apien.sss.domain.{ReportCalculator, SensorId, SensorStatistics}
+import com.apien.sss.test.{ResourceSpec, SensorSpec}
 
 class ReportCalculatorSpec extends SensorSpec with ResourceSpec {
 

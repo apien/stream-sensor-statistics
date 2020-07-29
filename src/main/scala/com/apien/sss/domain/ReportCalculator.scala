@@ -1,8 +1,7 @@
-package com.apien.sss
+package com.apien.sss.domain
 
 import cats.kernel.Monoid
-import com.apien.sss.ReportCalculator.FinalReport
-import com.apien.sss.domain.{SensorId, SensorStatistics}
+import com.apien.sss.domain.ReportCalculator.FinalReport
 import fs2.Stream
 import monix.eval.Task
 
