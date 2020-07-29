@@ -1,5 +1,4 @@
-package com.apien.sss
-
+package com.apien.sss.test
 
 trait ResourceSpec {
 
