@@ -2,6 +2,7 @@ package com.apien.sss.domain
 
 import cats.syntax.option._
 import com.apien.sss.domain.Measurement.InvalidMeasurement
+import com.apien.sss.test.SensorSpec
 
 class MeasurementSampleSpec extends SensorSpec {
 

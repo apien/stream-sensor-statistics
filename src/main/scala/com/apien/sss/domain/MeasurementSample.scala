@@ -1,6 +1,5 @@
 package com.apien.sss.domain
 
-import com.apien.sss.domain.domain.{Humidity, SensorId}
 import cats.syntax.option._
 
 case class MeasurementSample(sensorId: SensorId, value: Measurement)

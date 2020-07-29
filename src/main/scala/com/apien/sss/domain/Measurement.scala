@@ -1,7 +1,5 @@
 package com.apien.sss.domain
 
-import com.apien.sss.domain.domain.Humidity
-
 sealed trait Measurement
 
 object Measurement {
