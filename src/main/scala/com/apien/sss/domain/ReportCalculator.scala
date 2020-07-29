@@ -18,7 +18,9 @@ class ReportCalculator {
           processedFiles = files.size,
           processedMeasurement = filesResult.map(_._2.samplesTotal).sum,
           failedMeasurement = filesResult.map(_._2.samplesInvalid).sum,
-          stats = filesResult
+          stats = filesResult.toList
+            .sortBy(_._2.avg)
+            .reverse
         )
       }
 }
@@ -29,7 +31,7 @@ object ReportCalculator {
       processedFiles: Int,
       processedMeasurement: Int,
       failedMeasurement: Int,
-      stats: Map[SensorId, SensorStatistics]
+      stats: List[(SensorId, SensorStatistics)]
   )
 
 }
