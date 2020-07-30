@@ -6,4 +6,5 @@ object VersionOf {
   val refinedVersion = "0.9.13"
   val fs2 = "2.4.0"
   val amoniteOps = "2.0.4"
+  val pureConfig = "0.13.0"
 }

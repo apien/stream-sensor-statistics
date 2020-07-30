@@ -2,7 +2,8 @@ package com.apien.sss.domain
 
 import cats.syntax.option._
 import com.apien.sss.test.{ResourceSpec, SensorSpec}
-
+import fs2.Stream
+import monix.eval.Task
 class MeasurementSamplesStreamSpec extends SensorSpec with ResourceSpec {
 
   "MeasurementSampleStream" should "read valid values" in {

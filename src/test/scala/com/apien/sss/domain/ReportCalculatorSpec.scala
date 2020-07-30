@@ -10,7 +10,7 @@ class ReportCalculatorSpec extends SensorSpec with ResourceSpec {
   import SensorStatistics.monoid
   import cats.instances.map._
 
-  val report = new ReportCalculator
+  val report = new ReportCalculator(1)
 
   "ReportCalculator.process" should "provide data" in {
     report.process(List(getPathToResource("/simple.csv"))).runSyncUnsafe() shouldBe FinalReport(
@@ -99,7 +99,6 @@ class ReportCalculatorSpec extends SensorSpec with ResourceSpec {
           min = None,
           max = None
         ),
-
       )
     )
   }

@@ -22,6 +22,11 @@ cd /bin/dev
 
 Other option is to run application directly through sbt. 
 
+## Application configuration
+
+|env variable|system property|description|default value|example value|
+|---|---|---|---|---|
+| SENSOR_STATISTICS_PARALLELISM | parallelism | Parallelism level during processing of a files | 2 | 99 |
 
 ### Example
 

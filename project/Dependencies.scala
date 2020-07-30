@@ -14,5 +14,6 @@ object Dependencies {
   lazy val fs2IO = "co.fs2" %% "fs2-io" % VersionOf.fs2
 
   val amoniteOps         = "com.lihaoyi" %% "ammonite-ops" % VersionOf.amoniteOps
+   val pureConfig = "com.github.pureconfig" %% "pureconfig" % VersionOf.pureConfig
 
 }

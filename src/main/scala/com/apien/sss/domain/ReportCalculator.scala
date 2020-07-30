@@ -5,11 +5,14 @@ import com.apien.sss.domain.ReportCalculator.FinalReport
 import fs2.Stream
 import monix.eval.Task
 
-class ReportCalculator {
+class ReportCalculator(parallelism: Int) {
 
   def process(files: List[String])(implicit resultMonoid: Monoid[Map[SensorId, SensorStatistics]]): Task[FinalReport] =
-    Stream(files: _*)
-      .flatMap(MeasurementSamplesStream.process)
+    Stream(
+      Stream
+        .evalSeq(Task(files))
+        .flatMap(MeasurementSamplesStream.process)
+    ).parJoin(parallelism)
       .map(_.stats)
       .compile
       .foldMonoid

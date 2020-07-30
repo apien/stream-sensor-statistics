@@ -8,13 +8,13 @@ import com.apien.sss.test.{ResourceSpec, SensorSpec}
 class LocalFileRepositorySpec extends SensorSpec with ResourceSpec {
   private val repository = new LocalFileRepository
 
-  "FileUtil.findCsv" should "find all csv files even nested" in {
+  "LocalFileRepository.findCsv" should "find all csv files even nested" in {
     repository
       .findCsv(Paths.get(getPathToResource("/")))
       .runSyncUnsafe()
       .get
       .map(_.getFileName.toString) shouldBe
-      List("all_valid.csv", "invalid.csv", "simple.csv", "simple2.csv", "nested.csv")
+      List("all_valid.csv", "invalid.csv", "require_trim.csv", "simple.csv", "simple2.csv", "nested.csv")
   }
 
   it should "return empty Stream when the indicated files do not contain csv files" in {

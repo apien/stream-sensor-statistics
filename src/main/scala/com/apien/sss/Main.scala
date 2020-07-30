@@ -8,7 +8,6 @@ object Main extends TaskApp {
   override def run(args: List[String]): Task[ExitCode] =
     for {
       _ <- ConsoleUi.run(args)
-      _ <- Task(println("### END ####"))
     } yield ExitCode.Success
 
 }
