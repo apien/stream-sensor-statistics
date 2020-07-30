@@ -33,6 +33,14 @@ class MeasurementSamplesStreamSpec extends SensorSpec with ResourceSpec {
     )
   }
 
+  it should "trim values" in {
+    MeasurementSamplesStream.load(getPathToResource("/require_trim.csv")).compile.toList.runSyncUnsafe() shouldBe List(
+      MeasurementSample("s1", Measurement.ValidMeasurement(34)),
+      MeasurementSample("s1", Measurement.ValidMeasurement(76)),
+      MeasurementSample("s5", Measurement.ValidMeasurement(4))
+    )
+  }
+
   "MeasurementSamplesStream.process" should "calculate statistics for the file" in {
     MeasurementSamplesStream
       .process(getPathToResource("/simple.csv"))

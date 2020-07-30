@@ -17,7 +17,9 @@ object MeasurementSamplesStream {
           .through(text.utf8Decode)
           .through(text.lines)
           .drop(1)
-          .map(v => MeasurementSample.parse(v.split(",").toList))
+          .map(_.split(",").toList)
+          .map(_.map(_.trim))
+          .map(MeasurementSample.parse)
           .collect { case Some(measurement) => measurement }
       }
 
