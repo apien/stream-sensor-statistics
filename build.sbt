@@ -15,6 +15,7 @@ lazy val root = (project in file("."))
       Dependencies.refinedCats,
       Dependencies.fs2Core,
       Dependencies.fs2IO,
+      Dependencies.amoniteOps,
       scalaTest % Test
     ),
     scalacOptions ++= Seq(
