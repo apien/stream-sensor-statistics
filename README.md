@@ -2,6 +2,11 @@
 
 ## Getting started
 
+Application calculate statistics based on all csv files from the given directory.
+
+It does not include invalid rows (it does not contain two columns) to the calculations.
+It treats a measurement out of range `<0,100>` like `NaN`.   
+
 ### Prerequisites
 
 * Scala SBT [here](https://www.scala-sbt.org/)
