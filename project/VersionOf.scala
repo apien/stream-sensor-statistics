@@ -5,4 +5,5 @@ object VersionOf {
   val newType = "0.4.4"
   val refinedVersion = "0.9.13"
   val fs2 = "2.4.0"
+  val amoniteOps = "2.0.4"
 }
