@@ -1,7 +1,6 @@
-package com.apien.sss
+package com.apien.sss.domain
 
 import cats.syntax.option._
-import com.apien.sss.domain._
 import com.apien.sss.test.{ResourceSpec, SensorSpec}
 
 class MeasurementSamplesStreamSpec extends SensorSpec with ResourceSpec {
