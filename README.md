@@ -65,7 +65,7 @@ s3,NaN,NaN,NaN
 ```
 
 
-##TODO aka improvements :)
+## TODO aka improvements :)
 - Use refined types along with pure config to put restrictions on our configuration (i.e only positive numbers)
 - Write missing tests for other pieces of the code 
 (most of the code is prepared for the tests i.e: ReportCalculator which allows to write some dummy implementations/mocks) and verify behavior
