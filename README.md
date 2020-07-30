@@ -62,3 +62,12 @@ sensor-id,min,avg,max
 s2,78,82,88
 s1,10,54,98
 s3,NaN,NaN,NaN
+```
+
+
+##TODO aka improvements :)
+- Use refined types along with pure config to put restrictions on our configuration (i.e only positive numbers)
+- Write missing tests for other pieces of the code 
+(most of the code is prepared for the tests i.e: ReportCalculator which allows to write some dummy implementations/mocks) and verify behavior
+- Build jar/native image instead of running application directly from the sbt
+- Compose whole application from the fs2.Stream (I use my effect type for this purpose)
